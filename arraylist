@@ -1,0 +1,57 @@
+import.java.util.Scanner;
+import.java.util.ArrayList;
+public class String
+{
+    public static void main(String args[])
+    {
+        ArrayList<string>obj=new ArrayList<string>();
+        Scanner s=new Scanner(System.in);
+        int c,ch,i,j;
+        String str,str1;
+        do
+        {
+            System.out.println("STRING MANIPULATION"); System.out.println("******************************");
+            System.out.println(" 1. Append at end \t 2.Insert at particular index \t 3.Search \t");System.out.println( "4.List
+            string that starting with letter \t"); System.out.println("Enter the choice");
+            c=sc.nextInt();
+            switch(ch)
+            {
+                case 1:System.out.println("enter the string");
+                       str=sc.next();
+                       obj.add(str);
+                       break;
+                case 2:System.out.println("enter the string");
+                       str=sc.next();
+                       System.out..println("enter the position");
+                       i=sc.nextInt();
+                       obj.add(i-1,str);
+                       System.out.println("the array list has elements="+obj)
+                       break;
+                case 3:System.out.println("enter the string");
+                       str=sc.next();
+                       j=obj.indexOf(str);
+                       if(i==-1)
+                       {
+                        System.out.println("element not found");
+                       }
+                       else
+                       {
+                        System.out.println("index of"+str+"is"+j);
+                       }
+                       break;
+                case 4:System.out.println("enter the string");
+                       str=sc.next();
+                       for(i=0;i<(obj.size());i++)
+                       {
+                        str1=obj.get(i);
+                        if(str1.startsWith(str))
+                        {
+                            System.out.println("str1");
+                        }
+                       }
+                       break;
+                   }
+            }System.out.println("enter 0 to break and 1 to continue");
+            ch=sc.nextInt();
+        }while(ch==1);
+    }
