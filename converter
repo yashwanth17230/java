@@ -1,0 +1,149 @@
+package converters;
+import.java.io.*;
+public class currency
+{
+    int type;
+    double dollar,euro,yen,inr,val;
+    Scanner sc=new Scanner(System.in);
+    public void fnRead()
+    {
+        System.out.println("enter the denomination:");
+        System.out.println("1:dollar");
+        System.out.println("2:euro");
+        System.out.println("3:yen");
+        System.out.println("4:inr");
+        type=sc.nextLine();
+        System.out.println("enter the no of denominations to be converted");
+        val=sc.nextLine();
+        
+    }
+    public void fnConvert()
+    {
+        System.out.println("currency conversion");
+        switch(type)
+        {
+            case 1:inr=val*68.94;
+                   System.out.println("dollar="+val);
+                   System.out.println("inr="+inr);
+                   break;
+            case 2:inr=val*80.90;
+                   System.out.println("euro="+val);
+                   System.out.println("inr="+inr);
+                   break;
+            case 3:inr=val*0.62;
+                   System.out.println("yen="+val);
+                   System.out.println("inr="+inr);
+                   break;  
+            case 4:dollar=val/68.94;
+                   euro=val/80.90;
+                   yen=val/0.62;
+                   System.out.println("inr="+val);
+                   System.out.println("dollar="+dollar);
+                   System.out.println("euro="+euro);
+                   System.out.println("yen="+yen);
+                   break;
+        }
+    }
+}
+//distance .java
+package converters;
+import.java.util.*;
+public class distance
+{
+    int type;
+    double km,mrts,miles,val;
+    Scanner sc=new Scanner(System.in);
+    public void fnRead()
+    {
+        System.out.println("enter type:");
+        System.out.println("1:mrts");
+        System.out.println("2:miles");
+        System.out.println("3:km");
+        type=sc.nextLine();
+        System.out.println("enter value to be converted");
+        val=sc.nextLine();
+        
+    }
+    public void fnConvert()
+    {
+        System.out.println("distance conversion");
+        switch(type)
+        {
+            case 1:km=val/1000;
+                   System.out.println("mrts="+val);
+                   System.out.println("km="+km);
+                   break;
+            case 2:inr=val/0.621
+                   System.out.println("miles="+val);
+                   System.out.println("km="+km);
+                   break;
+            case 3:mrts=val*1000;
+                   miles=val*0.621;
+                   System.out.println("km="+val);
+                   System.out.println("mrts="+mrts);
+                   System.out.println("miles="+miles);
+                   break;
+        }
+    }
+}
+//time.java
+package converters;
+import.java.io.*;
+import.java.util.*;
+public class time
+{
+    int type,hr,min,sec,val;
+    Scanner sc=new Scanner(System.in);
+    public void fnRead()
+    {
+        System.out.println("enter type:");
+        System.out.println("1:sec");
+        System.out.println("2:min");
+        System.out.println("3:hr");
+        type=sc.nextLine();
+        System.out.println("enter the value to be converted");
+        val=sc.nextLine();
+        
+    }
+    public void fnConvert()
+    {
+        System.out.println("time conversion");
+        switch(type)
+        {
+            case 1:min=(val*60)%60;
+                   hr=val*3600;
+                   sec=val%60;
+                   System.out.println(val+"seconds="+hr+"hours"+min+"minutes and"+sec+"seonds");
+                   break;
+            case 2:min=val%60;
+                   hr=val/60;
+                   sec=val*60;
+                   System.out.println(val+"seconds="+hr+"hours"+min+"minutes and"+sec+"seonds");
+                   break;
+            case 3:min=val*60;
+                   hr=val;
+                   sec=min*60;
+                   System.out.println(val+"seconds="+hr+"hours"+min+"minutes and"+sec+"seonds");
+                   break;
+        }
+    }
+}
+//converts.java
+import.java.io.*;
+import.java.util.*;
+import converters.*;
+class conversion
+{
+    public static void main(String args[])
+    {
+       currency c1=new currency();
+       c1.fnRead()
+       c1.fnConvert();
+       distance d1=new distance();
+       d1.fnRead()
+       d1.fnConvert();
+       time t1=new time();
+       t1.fnRead()
+       t1.fnConvert();
+    }
+}
