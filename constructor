@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class Student
+{
+  int roll,m1,m2;
+  Student()
+{
+   System.out.println("constructor with parameter");
+   roll=1;
+   m1=1;
+   m2=1;
+}
+  Student(int x)
+{
+   System.out.println("consructor with parameter");
+   roll=m1=m2=4;
+}
+Student(int x,int y)
+{
+  roll=x;
+  m1=m2=y;
+}
+void display()
+{
+  System.out.println(roll);
+  System.out.println(m1);
+System.out.println();
+
+}
+}
+class Constructor
+{
+  public static void main(String args[])
+   {
+     Student S1=new Student();
+     S1.display();
+     Student S2=new Student(100);
+     S2.display();
+     Student S3=new Student(1,5);
+     S3.display();
+}
+}
+     
