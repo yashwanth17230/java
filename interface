@@ -1,0 +1,91 @@
+import java.util.Scanner;
+interface resume
+{
+    public void biodata();
+}
+class teacher implements resume
+{
+    String name;
+    String emailid;
+    long phone;
+    String address;
+    int age;
+    String qualification;
+    float experience;
+    String achievements;
+    public void biodata()
+    {
+    System.out.println("The Teacher details are:");
+    System.out.println("The name :"+name);
+    System.out.println("The emailid:"+emailid);
+    System.out.println("phone:"+phone);
+    System.out.println("address:"+address);
+    System.out.println("age:"+age);
+    System.out.println("qualification:"+qualification);
+    System.out.println("experience:"+experience);
+    System.out.println("acheivements:"+achievements);
+    }
+}
+class student implements resume
+{
+    String name; String emailid;
+    long phone; String address;
+    int age;
+    double result;
+    String discipline;
+    public void biodata()
+    {
+        System.out.println("The Student details are:");
+        System.out.println("The name :"+name);
+        System.out.println("The emailid:"+emailid);
+        System.out.println("phone:"+phone);
+        System.out.println("address:"+address);
+        System.out.println("age:"+age);
+        System.out.println("result:"+result);
+        System.out.println("discipline:"+discipline);
+   }
+}
+class Interface_2
+{
+    public static void main(String args[])
+    {
+        String n,e,ad,q,ach,di;
+        int p,ag;
+        float re,exp;
+        Scanner sc=new Scanner(System.in);
+        student s=new student();
+        teacher t=new teacher();
+        System.out.println("Enter the name of the teacher:");
+        t.name=sc.next();
+        System.out.println("Enter the emailid of the teacher:");
+        t.emailid=sc.next();
+        System.out.println("Enter the phone of the teacher:");
+        t.phone=sc.nextLong();
+        System.out.println("Enter the address of the teacher:");
+        t.address=sc.next();
+        System.out.println("Enter the age of the teacher:");
+        t.age=sc.nextInt();
+        System.out.println("Enter the qualification of the teacher:");
+        t.qualification=sc.next();
+        System.out.println("Enter the experience of the teacher:");
+        t.experience=sc.nextFloat();
+        System.out.println("Enter the acheivements of the teacher:");
+        t.achievements=sc.next();
+        t.biodata();
+        
+        System.out.println("Enter the name of the student:");
+        s.name=sc.next();
+        System.out.println("Enter the emailid of the student:");
+        s.emailid=sc.next();
+        System.out.println("Enter the phone of the student:");s.phone=sc.nextLong();
+        System.out.println("Enter the address of the student:");
+        s.address=sc.next();
+        System.out.println("Enter the age of the student:");
+        s.age=sc.nextInt();
+        System.out.println("Enter the result of the student:");
+        s.result=sc.nextDouble();
+        System.out.println("Enter the discipline of the student:");
+        s.discipline=sc.next();
+        s.biodata();
+    }
+} 
