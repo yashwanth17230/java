@@ -1,0 +1,100 @@
+import java.util.Scanner;
+class Staff
+{
+    String name,id,phoneno;
+    int salary;
+    void ReadDataA()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the name\n");
+        name=sc.nextLine();
+        System.out.println("enter the id\n");
+        id=sc.nextLine();
+        System.out.println("enter the phoneno\n");
+        phoneno=sc.nextLine();
+        System.out.println("enter the salary\n");
+        salary=sc.nextInt();
+    }
+    void displayDataA()
+    {
+        System.out.println("name="+name);
+        System.out.println("id="+id);
+        System.out.println("phoneno="+phoneno);
+        System.out.println("salary="+salary);
+    }
+}
+class Teaching extends Staff 
+{
+    String domain,publication;
+    void readDataB()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the domain\n");
+        domain=sc.nextLine();
+        System.out.println("enter the publication\n");
+        publication=sc.nextLine();
+    }
+    void displayDataB()
+    {
+        System.out.println("domain="+domain);
+        System.out.println("publication="+publication);
+    }
+}
+class Technical extends Staff 
+{
+    String skill;
+    void readDataC()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the skill\n");
+        skill=sc.nextLine();
+    }
+    void displayDataC()
+    {
+        System.out.println("skills="+skill);
+    }
+}
+class Contract extends Staff 
+{
+    String period;
+    void readDataD()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the period\n");
+        period=sc.nextLine();
+    }
+    void displayDataD()
+    {
+        System.out.println("period="+period);
+    }
+}
+class Staff1
+{
+    public static void main(String args[])
+    {
+        double n1,n2,n3;
+        Teaching t1 =new Teaching();
+        Technical t2=new Technical();
+        Contract t3=new Contract();
+        
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the no the staffs\n");
+        n1=sc.nextDouble();
+        for(int i=0;i<=10;i++)
+        {
+            t1.ReadDataA();
+		t1.displayDataA();
+		t1.readDataB();
+		t1.displayDataB();
+		t2.ReadDataA();
+		t2.displayDataA();
+		t2.readDataC();
+		t2.displayDataC();
+		t3.ReadDataA();
+		t3.displayDataA();
+		t3.readDataD();
+		t3.displayDataD();
+		}
+		
+}
+}
