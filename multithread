@@ -1,0 +1,59 @@
+import java.util.Scanner;
+import java.util.Random;
+class square extends Thread
+{
+    int x;
+    public square(int r)
+    {
+        x=r;
+    }
+    public void run()
+    {
+       int sq=x*x;
+       System.out.println("square of"+x+"="+sq);
+    }
+}
+class cube extends Thread
+{
+    int x;
+    public cube(int r)
+    {
+        x=r;
+    }
+    public void run()
+    {
+        int cu=x*x*x;
+        System.out.println("cube of"+x+"="+cu);
+    }
+}
+class random_number extends Thread
+{
+        public void run()
+        {
+            Random ra = new Random();
+            for( int i=0;i<=10;i++)
+            {
+                int r=ra.nextInt(100);
+                System.out.println("random number:"+r);
+                square S = new square(r);
+                S.start();
+                cube C=new cube(r);
+                C.start();
+                try{
+                    Thread.sleep(100);
+                }
+                catch(InterruptedException e){
+                    System.out.println("e");
+                }
+
+            }
+        }
+ }
+ public class Multi
+ {
+    public static void main(String args[])
+    {
+        random_number n=new random_number();
+        n.start();
+    }
+ }
