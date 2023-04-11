@@ -1,0 +1,54 @@
+import java.util.*;
+import java.io.*;
+class Arraylist
+{
+    public static void main(String args[])
+    {
+        ArrayList<String> obj=new ArrayList<String>();
+        Scanner sc=new Scanner(System.in);
+        int c,i,j;
+        String str,str1;
+        do{
+            System.out.println("MENU\n1.Append at end\n2.Insert\n3.Search\n4.list of string with letter\n");
+            c=sc.nextInt();
+            switch(c)
+            {
+                case 1:System.out.println("enter the string");
+                       str=sc.next();
+                       obj.add(str);
+                       break;
+
+                case 2:System.out.println("enter the string");
+                       str=sc.next();
+                       System.out.println("enter the position to be inserted");
+                       i=sc.nextInt();
+                       obj.add(i,str);
+                       System.out.println("the array list has following elements:"+obj);
+                       break;
+
+                case 3:System.out.println("enter the string");
+                       str=sc.next();
+                       j=obj.indexOf(str);
+                       if(j==-1)
+                       System.out.println("element is not found");
+                       else
+                       System.out.println("index of:"+str+"is"+j);
+                       break;
+
+                case 4:System.out.println("enter the string");
+                       str=sc.next();
+                       for(i=0;i<(obj.size());i++)
+                       {
+                        str1=obj.get(i);
+                        if(str1.startsWith(str))
+                        {
+                            System.out.println("str1");
+                        }
+                       }
+                       break;
+                       
+
+            }
+        }while(!(c==5));
+    }
+}
