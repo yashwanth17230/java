@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+class Aboutfile
+  {
+    public static void main(String args[])
+    {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter the file name");
+      String file_name=sc.nextLine();
+      File f=new File(file_name);
+      if(f.exists())
+                 System.out.println("the file name exists"+file_name);
+        
+      else
+       
+         System.out.println("the file does not exist"+file_name);
+       
+      if(f.exists())
+       {
+         if(f.canRead())
+          
+            System.out.println("the file is redable"+file_name);
+          
+          else
+         
+          System.out.println("the not redable"+file_name);
+         
+       }
+      if(f.canWrite())
+        
+          System.out.println("the file is writable"+file_name);
+         
+        else
+         
+          System.out.println("the file not redable"+file_name);
+         
+        System.out.println("the length of file"+f.length());
+       }
+}
